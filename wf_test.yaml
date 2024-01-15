@@ -1,0 +1,140 @@
+config:
+  database_url: localhost
+  database_name: kahi
+  log_database: kahi
+  log_collection: log
+workflow:
+  doaj_sources:
+    database_url: localhost:27017
+    database_name: doaj
+    collection_name: stage
+  scimago_sources:
+    file_path: 
+      - /current/data/scimago/scimagojr 1999.csv
+      - /current/data/scimago/scimagojr 2000.csv
+      - /current/data/scimago/scimagojr 2001.csv
+      - /current/data/scimago/scimagojr 2002.csv
+      - /current/data/scimago/scimagojr 2003.csv
+      - /current/data/scimago/scimagojr 2004.csv
+      - /current/data/scimago/scimagojr 2005.csv
+      - /current/data/scimago/scimagojr 2006.csv
+      - /current/data/scimago/scimagojr 2007.csv
+      - /current/data/scimago/scimagojr 2008.csv
+      - /current/data/scimago/scimagojr 2009.csv
+      - /current/data/scimago/scimagojr 2010.csv
+      - /current/data/scimago/scimagojr 2011.csv
+      - /current/data/scimago/scimagojr 2012.csv
+      - /current/data/scimago/scimagojr 2013.csv
+      - /current/data/scimago/scimagojr 2014.csv
+      - /current/data/scimago/scimagojr 2015.csv
+      - /current/data/scimago/scimagojr 2016.csv
+      - /current/data/scimago/scimagojr 2017.csv
+      - /current/data/scimago/scimagojr 2018.csv
+      - /current/data/scimago/scimagojr 2019.csv
+      - /current/data/scimago/scimagojr 2020.csv
+      - /current/data/scimago/scimagojr 2021.csv
+      - /current/data/scimago/scimagojr 2022.csv
+  scienti_sources:
+    - database_url: localhost:27017
+      database_name: scienti_111
+      collection_name: products
+    #- database_url: localhost:27017
+    #  database_name: scienti_uec_2022
+    #  collection_name: product
+    #- database_url: localhost:27017
+    #  database_name: scienti_univalle_2022
+    #  collection_name: product
+  openalex_sources:
+    database_url: localhost:27017
+    database_name: openalex
+    collection_name: venues
+    num_jobs: 10
+  openalex_subjects:
+    database_url: localhost:27017
+    database_name: openalex
+    collection_name: concepts
+    num_jobs: 20
+  ror_affiliations:
+    database_url: localhost:27017
+    database_name: ror
+    collection_name: stage
+    num_jobs: 20
+  openalex_affiliations:
+    database_url: localhost:27017
+    database_name: openalexco
+    collection_name: institutions
+    num_jobs: 20
+  #wikipedia_affiliations:
+  #  tasks:
+  #     - names
+  #    - logos
+  #  num_jobs: 5
+  #  verbose: 5
+  staff_udea_affiliations:
+    file_path: /current/data/colombia/udea/Base de Datos profesores 2019_con_clasificación de Colciencias.xlsx
+  scienti_affiliations:
+    databases:
+      - database_url: localhost:27017
+        database_name: scienti_111
+        collection_name: products
+    verbose: 5
+    #- database_url: localhost:27017
+    #  database_name: scienti_uec_2022
+    #  collection_name: product
+    #- database_url: localhost:27017
+    #  database_name: scienti_univalle_2022
+    #  collection_name: product
+  minciencias_opendata_affiliations:
+    file_path: /current/data/colombia/scienti-abiertos/3-Grupos_de_Investigaci_n_Reconocidos.csv
+  staff_udea_person:
+    file_path: /current/data/colombia/udea/Base de Datos profesores 2019_con_clasificación de Colciencias.xlsx
+  scienti_person:
+    databases:
+      - database_url: localhost:27017
+        database_name: scienti_111
+        collection_name: products
+    verbose: 2
+    #- database_url: localhost:27017
+    #  database_name: scienti_uec_2022
+    #  collection_name: product
+    #- database_url: localhost:27017
+    #  database_name: scienti_univalle_2022
+    #  collection_name: product
+  minciencias_opendata_person:
+    researchers: /current/data/colombia/scienti-abiertos/2-Investigadores_Reconocidos_por_convocatoria.csv
+    cvlac: /current/data/colombia/scienti-abiertos/4-cvlac.csv
+    groups_production: /current/data/colombia/scienti-abiertos/1-Producci_n_Grupos_Investigaci_n.csv
+    num_jobs: 20
+  openalex_person:
+    database_url: localhost:27017
+    database_name: openalexco
+    collection_name: authors
+    num_jobs: 20
+  openalex_works:
+    database_url: localhost:27017
+    database_name: openalexco
+    collection_name: works
+    num_jobs: 10
+    verbose: 5
+  scienti_works:
+    databases:
+      - database_url: localhost:27017
+        database_name: scienti_111
+        collection_name: products
+    num_jobs: 10
+    verbose: 5
+  #  scopus:
+  #    database_url: localhost:27017
+  #    database_name: scopus_colombia
+  #    collection_name: stage
+  #  wos:
+  #    database_url: localhost:27017
+  #    database_name: wos_colombia
+  #    collection_name: stage
+  #  scholar:
+  #    database_url: localhost:27017
+  #    database_name: scholar_colombia
+  #    collection_name: stage
+  #  
+  #  puntaje:
+  #    file_path: /current/data/colombia/udea/produccion 2018-2022 al 27 oct 2022.xlsx
