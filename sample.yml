@@ -60,7 +60,7 @@ workflow:
     collection_name: institutions
     num_jobs: 20
   staff_udea_affiliations:
-    file_path: colombia/udea/Base de Datos profesores 2019_con_clasificación de Colciencias.xlsx
+    file_path: udea/Base de Datos profesores 2019_con_clasificación de Colciencias.xlsx
   scienti_affiliations:
     databases:
       - database_url: localhost:27017
@@ -68,9 +68,9 @@ workflow:
         collection_name: products
     verbose: 5
   minciencias_opendata_affiliations:
-    file_path: colombia/scienti-abiertos/3-Grupos_de_Investigaci_n_Reconocidos.csv
+    file_path: scienti-abiertos/3-Grupos_de_Investigaci_n_Reconocidos.csv
   staff_udea_person:
-    file_path: colombia/udea/Base de Datos profesores 2019_con_clasificación de Colciencias.xlsx
+    file_path: udea/Base de Datos profesores 2019_con_clasificación de Colciencias.xlsx
   scienti_person:
     databases:
       - database_url: localhost:27017
@@ -78,15 +78,16 @@ workflow:
         collection_name: products
     verbose: 2
   minciencias_opendata_person:
-    researchers: colombia/scienti-abiertos/2-Investigadores_Reconocidos_por_convocatoria.csv
-    cvlac: colombia/scienti-abiertos/4-cvlac.csv
-    groups_production: colombia/scienti-abiertos/1-Producci_n_Grupos_Investigaci_n.csv
+    researchers: scienti-abiertos/2-Investigadores_Reconocidos_por_convocatoria.csv
+    cvlac: scienti-abiertos/4-cvlac.csv
+    groups_production: scienti-abiertos/1-Producci_n_Grupos_Investigaci_n.csv
     num_jobs: 20
   openalex_person:
     database_url: localhost:27017
     database_name: openalexco
     collection_name: authors
     num_jobs: 20
+    verbose: 5
 # works
   openalex_works:
     database_url: localhost:27017
@@ -101,23 +102,24 @@ workflow:
         collection_name: scienti_works
     num_jobs: 10
     verbose: 5
-  scopus:
+  scopus_works:
     database_url: localhost:27017
     database_name: kahi_sample_works
     collection_name: scopus_works
     num_jobs: 10
     verbose: 5
-  wos:
+  wos_works:
     database_url: localhost:27017
     database_name: kahi_sample_works
     collection_name: wos_works
     num_jobs: 10
     verbose: 5
-  scholar:
+  scholar_works:
     database_url: localhost:27017
     database_name: kahi_sample_works
     collection_name: scholar_works
     num_jobs: 10
     verbose: 5
-  puntaje:
-      file_path: colombia/udea/produccion 2018-2022 al 27 oct 2022.xlsx
+   
+  ranking_udea_works:
+    file_path: puntaje_sample.xlsx
