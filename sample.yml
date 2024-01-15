@@ -119,6 +119,5 @@ workflow:
     collection_name: scholar_works
     num_jobs: 10
     verbose: 5
-  #  
-  #  puntaje:
-  #    file_path: colombia/udea/produccion 2018-2022 al 27 oct 2022.xlsx
+  puntaje:
+      file_path: colombia/udea/produccion 2018-2022 al 27 oct 2022.xlsx
