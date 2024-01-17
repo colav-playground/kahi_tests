@@ -1,0 +1,126 @@
+config:
+  database_url: localhost
+  database_name: kahi_all
+  log_database: kahi_all
+  log_collection: log
+workflow:
+  doaj_sources:
+    database_url: localhost:27017
+    database_name: doaj
+    collection_name: stage
+    verbose: 5
+  scimago_sources:
+    file_path: 
+      - scimago/scimagojr 1999.csv
+      - scimago/scimagojr 2000.csv
+      - scimago/scimagojr 2001.csv
+      - scimago/scimagojr 2002.csv
+      - scimago/scimagojr 2003.csv
+      - scimago/scimagojr 2004.csv
+      - scimago/scimagojr 2005.csv
+      - scimago/scimagojr 2006.csv
+      - scimago/scimagojr 2007.csv
+      - scimago/scimagojr 2008.csv
+      - scimago/scimagojr 2009.csv
+      - scimago/scimagojr 2010.csv
+      - scimago/scimagojr 2011.csv
+      - scimago/scimagojr 2012.csv
+      - scimago/scimagojr 2013.csv
+      - scimago/scimagojr 2014.csv
+      - scimago/scimagojr 2015.csv
+      - scimago/scimagojr 2016.csv
+      - scimago/scimagojr 2017.csv
+      - scimago/scimagojr 2018.csv
+      - scimago/scimagojr 2019.csv
+      - scimago/scimagojr 2020.csv
+      - scimago/scimagojr 2021.csv
+      - scimago/scimagojr 2022.csv
+      - scimago/scimagojr 2023.csv
+  scienti_sources:
+    - database_url: localhost:27017
+      database_name: scienti_111
+      collection_name: products
+  openalex_sources:
+    database_url: localhost:27017
+    database_name: openalex
+    collection_name: venues
+    num_jobs: 72
+  openalex_subjects:
+    database_url: localhost:27017
+    database_name: openalex
+    collection_name: concepts
+    num_jobs: 72
+  ror_affiliations:
+    database_url: localhost:27017
+    database_name: ror
+    collection_name: stage
+    num_jobs: 72
+  openalex_affiliations:
+    database_url: localhost:27017
+    database_name: openalexco
+    collection_name: institutions
+    num_jobs: 72
+  staff_udea_affiliations:
+    file_path: udea/Base de Datos profesores 2019_con_clasificación de Colciencias.xlsx
+  scienti_affiliations:
+    databases:
+      - database_url: localhost:27017
+        database_name: scienti_111
+        collection_name: products
+    verbose: 5
+  minciencias_opendata_affiliations:
+    file_path: scienti-abiertos/3-Grupos_de_Investigaci_n_Reconocidos.csv
+  staff_udea_person:
+    file_path: udea/Base de Datos profesores 2019_con_clasificación de Colciencias.xlsx
+  scienti_person:
+    databases:
+      - database_url: localhost:27017
+        database_name: scienti_111
+        collection_name: products
+    verbose: 2
+  minciencias_opendata_person:
+    researchers: scienti-abiertos/2-Investigadores_Reconocidos_por_convocatoria.csv
+    cvlac: scienti-abiertos/4-cvlac.csv
+    groups_production: scienti-abiertos/1-Producci_n_Grupos_Investigaci_n.csv
+    num_jobs: 72
+  openalex_person:
+    database_url: localhost:27017
+    database_name: openalexco
+    collection_name: authors
+    num_jobs: 72
+    verbose: 5
+#works
+  scienti_works:
+    databases:
+      - database_url: localhost:27017
+        database_name: scienti_111
+        collection_name: products
+    num_jobs: 72
+    verbose: 5
+  ranking_udea_works:
+    file_path: udea/produccion\ 2018-2022\ al\ 27\ oct\ 2022.xlsx
+  openalex_works:
+    database_url: localhost:27017
+    database_name: openalexco
+    collection_name: works
+    num_jobs: 72
+    verbose: 5
+  scopus_works:
+    database_url: localhost:27017
+    database_name: scopus_colombia 
+    collection_name: stage
+    num_jobs: 72
+    verbose: 5
+  wos_works:
+    database_url: localhost:27017
+    database_name: wos_colombia
+    collection_name: stage
+    num_jobs: 72
+    verbose: 5
+  scholar_works:
+    database_url: localhost:27017
+    database_name: scholar_colombia
+    collection_name: stage
+    num_jobs: 72
+    verbose: 5
+   
