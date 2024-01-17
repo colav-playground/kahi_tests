@@ -89,6 +89,12 @@ workflow:
     num_jobs: 20
     verbose: 5
 #works
+  openalex_works:
+    database_url: localhost:27017
+    database_name: kahi_sample_works
+    collection_name: oa_works
+    num_jobs: 10
+    verbose: 5
   scienti_works:
     databases:
       - database_url: localhost:27017
@@ -98,12 +104,6 @@ workflow:
     verbose: 5
   ranking_udea_works:
     file_path: puntaje_sample.xlsx
-  openalex_works:
-    database_url: localhost:27017
-    database_name: kahi_sample_works
-    collection_name: oa_works
-    num_jobs: 10
-    verbose: 5
   scopus_works:
     database_url: localhost:27017
     database_name: kahi_sample_works

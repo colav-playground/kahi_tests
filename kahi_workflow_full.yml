@@ -98,7 +98,7 @@ workflow:
     num_jobs: 72
     verbose: 5
   ranking_udea_works:
-    file_path: udea/produccion\ 2018-2022\ al\ 27\ oct\ 2022.xlsx
+    file_path: udea/produccion 2018-2022 al 27 oct 2022.xlsx
   openalex_works:
     database_url: localhost:27017
     database_name: openalexco
