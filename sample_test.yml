@@ -93,14 +93,14 @@ workflow:
     database_url: localhost:27017
     database_name: kahi_sample_works
     collection_name: oa_works
-    num_jobs: 10
+    num_jobs: 6
     verbose: 5
   scienti_works:
     databases:
       - database_url: localhost:27017
         database_name: kahi_sample_works
         collection_name: scienti_works
-    num_jobs: 10
+    num_jobs: 6
     verbose: 5
   ranking_udea_works:
     file_path: puntaje_sample.xlsx
@@ -108,18 +108,18 @@ workflow:
     database_url: localhost:27017
     database_name: kahi_sample_works
     collection_name: scopus_works
-    num_jobs: 10
+    num_jobs: 6
     verbose: 5
   wos_works:
     database_url: localhost:27017
     database_name: kahi_sample_works
     collection_name: wos_works
-    num_jobs: 10
+    num_jobs: 6
     verbose: 5
   scholar_works:
     database_url: localhost:27017
     database_name: kahi_sample_works
     collection_name: scholar_works
-    num_jobs: 10
+    num_jobs: 6
     verbose: 5
    
