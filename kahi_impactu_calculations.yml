@@ -1,0 +1,11 @@
+config:
+  database_url: localhost:27017
+  database_name: kahi
+  log_database: kahi
+  log_collection: log
+workflow:
+  impactu_postcalculations:
+    database_url: localhost:27017
+    database_name: kahi_calculations
+    n_jobs: 20
+    verbose: 5
